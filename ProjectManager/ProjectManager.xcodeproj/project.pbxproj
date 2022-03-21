@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3344F2F927E0369D003852E5 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3344F2F827E0369D003852E5 /* Realm */; };
+		3344F2FB27E0369D003852E5 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3344F2FA27E0369D003852E5 /* RealmSwift */; };
 		334BADEC27D8A0980098F448 /* ScheduleItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334BADEB27D8A0980098F448 /* ScheduleItemViewModel.swift */; };
 		334BADEE27D8B1BC0098F448 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334BADED27D8B1BC0098F448 /* MainViewCoordinator.swift */; };
 		334BADF027D8F2690098F448 /* ScheduleItemCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334BADEF27D8F2690098F448 /* ScheduleItemCoordinator.swift */; };
@@ -30,12 +32,12 @@
 		376D6FB527D734950097D31A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376D6FB427D734950097D31A /* MainViewModel.swift */; };
 		37CC921827D74D15003F1122 /* ScheduleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC921727D74D15003F1122 /* ScheduleListCell.swift */; };
 		37CC921F27D87105003F1122 /* ScheduleItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC921E27D87105003F1122 /* ScheduleItemViewController.swift */; };
-		37CC922227DB1258003F1122 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC922127DB1258003F1122 /* PopoverViewController.swift */; };
-		37CC922427DB1267003F1122 /* PopoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC922327DB1267003F1122 /* PopoverViewModel.swift */; };
-		37CC922627DB168C003F1122 /* PopoverCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC922527DB168C003F1122 /* PopoverCoordinator.swift */; };
+		37CC922227DB1258003F1122 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC922127DB1258003F1122 /* PopoverView.swift */; };
 		37CC922827DBA84E003F1122 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC922727DBA84E003F1122 /* Date+Extension.swift */; };
 		37CC922A27DBAB29003F1122 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC922927DBAB29003F1122 /* Array+Extension.swift */; };
 		37CC922C27DCB7A3003F1122 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC922B27DCB7A3003F1122 /* String+Extension.swift */; };
+		37CC926F27E1C05C003F1122 /* MainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC926E27E1C05C003F1122 /* MainUseCase.swift */; };
+		37CC927127E1C06C003F1122 /* ScheduleItemUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC927027E1C06C003F1122 /* ScheduleItemUseCase.swift */; };
 		37FB8D9727D1DE6100ED9AE2 /* ScheduleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB8D9627D1DE6100ED9AE2 /* ScheduleUseCase.swift */; };
 		37FB8D9927D1EDD400ED9AE2 /* MemoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB8D9827D1EDD400ED9AE2 /* MemoryDataSource.swift */; };
 		C7431F0625F51E1D0094C4CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7431F0525F51E1D0094C4CF /* AppDelegate.swift */; };
@@ -79,12 +81,12 @@
 		376D6FB427D734950097D31A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		37CC921727D74D15003F1122 /* ScheduleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListCell.swift; sourceTree = "<group>"; };
 		37CC921E27D87105003F1122 /* ScheduleItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItemViewController.swift; sourceTree = "<group>"; };
-		37CC922127DB1258003F1122 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
-		37CC922327DB1267003F1122 /* PopoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewModel.swift; sourceTree = "<group>"; };
-		37CC922527DB168C003F1122 /* PopoverCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverCoordinator.swift; sourceTree = "<group>"; };
+		37CC922127DB1258003F1122 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		37CC922727DBA84E003F1122 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		37CC922927DBAB29003F1122 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		37CC922B27DCB7A3003F1122 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		37CC926E27E1C05C003F1122 /* MainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUseCase.swift; sourceTree = "<group>"; };
+		37CC927027E1C06C003F1122 /* ScheduleItemUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItemUseCase.swift; sourceTree = "<group>"; };
 		37FB8D9627D1DE6100ED9AE2 /* ScheduleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleUseCase.swift; sourceTree = "<group>"; };
 		37FB8D9827D1EDD400ED9AE2 /* MemoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDataSource.swift; sourceTree = "<group>"; };
 		C7431F0225F51E1D0094C4CF /* ProjectManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3344F2FB27E0369D003852E5 /* RealmSwift in Frameworks */,
+				3344F2F927E0369D003852E5 /* Realm in Frameworks */,
 				E94F18D827CD036D00FF6DA1 /* RxCocoa in Frameworks */,
 				E94F18D627CD036D00FF6DA1 /* RxRelay in Frameworks */,
 				E94F18D227CD036D00FF6DA1 /* RxSwift in Frameworks */,
@@ -208,28 +212,11 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		33D15E1327DBA6B8006407A9 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				37CC922327DB1267003F1122 /* PopoverViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		33D15E1427DBA6BA006407A9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				37CC922127DB1258003F1122 /* PopoverViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		37CC921927D86FF7003F1122 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				37CC921A27D870A4003F1122 /* Main */,
 				37CC921D27D870DB003F1122 /* ScheduleItem */,
-				37CC922027DB120C003F1122 /* Popover */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -258,6 +245,7 @@
 				C7431F0925F51E1D0094C4CF /* MainViewController.swift */,
 				37CC921727D74D15003F1122 /* ScheduleListCell.swift */,
 				33D15E1127DB47BD006407A9 /* ScheduleListHeaderView.swift */,
+				37CC922127DB1258003F1122 /* PopoverView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,14 +260,13 @@
 			path = ScheduleItem;
 			sourceTree = "<group>";
 		};
-		37CC922027DB120C003F1122 /* Popover */ = {
+		37CC926D27E1C046003F1122 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				33D15E1427DBA6BA006407A9 /* View */,
-				33D15E1327DBA6B8006407A9 /* ViewModel */,
-				37CC922527DB168C003F1122 /* PopoverCoordinator.swift */,
+				37CC926E27E1C05C003F1122 /* MainUseCase.swift */,
+				37CC927027E1C06C003F1122 /* ScheduleItemUseCase.swift */,
 			);
-			path = Popover;
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		37FB8D9427D1DDF400ED9AE2 /* Domain */ = {
@@ -296,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				37FB8D9627D1DE6100ED9AE2 /* ScheduleUseCase.swift */,
+				37CC926D27E1C046003F1122 /* Protocol */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -376,6 +364,8 @@
 				E94F18D527CD036D00FF6DA1 /* RxRelay */,
 				E94F18D727CD036D00FF6DA1 /* RxCocoa */,
 				E94F18D927CD036D00FF6DA1 /* RxBlocking */,
+				3344F2F827E0369D003852E5 /* Realm */,
+				3344F2FA27E0369D003852E5 /* RealmSwift */,
 			);
 			productName = ProjectManager;
 			productReference = C7431F0225F51E1D0094C4CF /* ProjectManager.app */;
@@ -411,6 +401,7 @@
 			packageReferences = (
 				E94F18CA27CD002700FF6DA1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				E94F18D027CD036D00FF6DA1 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				3344F2F727E0369D003852E5 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = C7431F0325F51E1D0094C4CF /* Products */;
 			projectDirPath = "";
@@ -484,6 +475,8 @@
 			files = (
 				33D15E1627DBA724006407A9 /* UIView+Shadow.swift in Sources */,
 				37CC921827D74D15003F1122 /* ScheduleListCell.swift in Sources */,
+				37CC927127E1C06C003F1122 /* ScheduleItemUseCase.swift in Sources */,
+				37CC926F27E1C05C003F1122 /* MainUseCase.swift in Sources */,
 				33D15E1227DB47BD006407A9 /* ScheduleListHeaderView.swift in Sources */,
 				336E237827D1E7B300C40ECC /* DataSource.swift in Sources */,
 				37FB8D9927D1EDD400ED9AE2 /* MemoryDataSource.swift in Sources */,
@@ -492,11 +485,9 @@
 				C7431F0A25F51E1D0094C4CF /* MainViewController.swift in Sources */,
 				37CC922C27DCB7A3003F1122 /* String+Extension.swift in Sources */,
 				336E237B27D1E7DD00C40ECC /* Repository.swift in Sources */,
-				37CC922627DB168C003F1122 /* PopoverCoordinator.swift in Sources */,
 				334BADEC27D8A0980098F448 /* ScheduleItemViewModel.swift in Sources */,
 				37CC921F27D87105003F1122 /* ScheduleItemViewController.swift in Sources */,
 				334BADEE27D8B1BC0098F448 /* MainViewCoordinator.swift in Sources */,
-				37CC922427DB1267003F1122 /* PopoverViewModel.swift in Sources */,
 				334BADF027D8F2690098F448 /* ScheduleItemCoordinator.swift in Sources */,
 				37CC922A27DBAB29003F1122 /* Array+Extension.swift in Sources */,
 				376D6FB527D734950097D31A /* MainViewModel.swift in Sources */,
@@ -505,7 +496,7 @@
 				336E237627D1E6B200C40ECC /* DataRepository.swift in Sources */,
 				336E237227D1DC0000C40ECC /* Schedule.swift in Sources */,
 				C7431F0825F51E1D0094C4CF /* SceneDelegate.swift in Sources */,
-				37CC922227DB1258003F1122 /* PopoverViewController.swift in Sources */,
+				37CC922227DB1258003F1122 /* PopoverView.swift in Sources */,
 				33B6322327D7554C00EB169D /* DateFormatter+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -746,6 +737,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3344F2F727E0369D003852E5 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		E94F18CA27CD002700FF6DA1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -765,6 +764,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3344F2F827E0369D003852E5 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3344F2F727E0369D003852E5 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		3344F2FA27E0369D003852E5 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3344F2F727E0369D003852E5 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		E94F18CB27CD002700FF6DA1 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E94F18CA27CD002700FF6DA1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
