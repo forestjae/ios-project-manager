@@ -110,6 +110,7 @@ usecase는 어디서 주입해야하는지, 서로 다른 뷰모델이 하나의
 
 ### 3. 특정 이벤트 상황에서 뷰모델에 ViewComponent를 전달해도 될까요? (Popover의 sourceView)
 뷰의 TableView에서 LongPress 제스쳐 이벤트가 발생했을때, 팝오버 뷰를 해당 셀의 위치에서 띄우기 위해서 현재 해당 이벤트에서 UITableViewCell을 받도록 구현되어 있습니다. 그래서 해당 ViewModel에서 `UIKit`이 import 되어 있는데, MVVM 원칙에 위배되는게 아닌지 생각이 되었습니다. (현재 뷰 전환을 담당하는 Coordinator를 ViewModel에서 소유하고 있습니다.)
+> ViewModel은 특정 UI 프레임워크에 종속되어 있지 않아야 하므로, 수정했습니다.
 
 ### 4. View가 ViewModel에게 모델 Entity 타입을 사용하여 데이터를 전달해도 되는지
 `MainVC`와 `MainVM` 간에, TableView의 특정 Cell에 해당하는 모델을 직접 주고받고 있습니다. 이 모델(`Schedule`)은 셀을 그리는데에는 불필요한 id, progress 와 같은 프로퍼티를 가지고 있습니다. 이런 상황에서 현재처럼 모델 Entity 타입을 사용하여 소통해도 괜찮은건지 궁금합니다.
