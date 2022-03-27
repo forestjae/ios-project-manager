@@ -105,6 +105,8 @@ View에서 수신하는 Input과 View에서 바인딩을 하게되는 Output을 
 (MVVM + Clean 구조에서) 한 번 fetch해 온 데이터(모델)을 뷰에 표현하기 위해 가공하거나 사용하기 위해서 누군가는 데이터를 소유할 필요가 있었습니다. 이 데이터를 뷰모델이 소유하는 것이 맞는지, 혹은 `UseCase`가 소유하는 것이 맞는지 궁금합니다.
 현재 저희는 `ScheduleUseCase`에서 `BehaviorRelay`로 `schedules`와  `currentSchedule`을 소유하여 이것을 각 뷰모델이 사용하고 있습니다. 
 
+> Usecase보다는 Repository가 맞는 것으로 결론.  
+
 ### 2. UseCase의 주입과 역할
 usecase는 어디서 주입해야하는지, 서로 다른 뷰모델이 하나의 usecase를 공유해도 되는지, usecase를 공유한다면 어떤 방법으로 해야하는지, usecase가 observable프로퍼티를 가져도 되는지 궁금합니다.
 
@@ -117,11 +119,15 @@ usecase는 어디서 주입해야하는지, 서로 다른 뷰모델이 하나의
 정리하면, `Presentaion Layer`에서 뷰에 표시할 정보(e.g. tableViewCell)를 일반화한 모델 타입과 Domain 및 Data Layer에서 비즈니스 로직에 사용할 모델 타입을 별개로 만들어야 하는 것일지가 궁금합니다. 
 (View를 그리는데 필요한 요소만 남기게 된다면 각 모델을 식별하는 UUID가 필요가 없어질텐데 , 이 경우에는 ViewModel에서 모델을 식별하는 방법이 없어지지 않을까요?)
 
+> 필요에 따라 달라진다. 도메인에서 다루는 Model이 너무 크고 View표현에 불필요한 것들을 많이 가지고 있다면 분리할 수 있다. 
+
 ### 5. RxSwift 사용 시 Optional Unwrapping을 쉽게 하는 방법?
 ```swift
 .flatMap { Observable.from(optional: targetProgressSet.first) }
 ```
 프로젝트에서 flatMap 오퍼레이터를 사용하여 위와 같이 옵셔널 언래핑을 진행하고 있는데요, 새로운 Observable이 create되기 때문에, 좋지 못한 방법이라는 생각되었습니다. 
+
+> compactMap을 사용하자.
 
 ### 6. `ScheduleItemViewModel`에서 Mode에 따른 로직이 복잡해지는 문제
 현재 모달로 띄워지는 `ScheduleItemView`가 상세보기/수정/생성 모드 별로 다르게 동작해야 하는 상황입니다. 이를 위해 enum Mode를 정의하여 이에 따라 사용자 이벤트를 다르게 처리하도록 하고 있는데요. 그로 인해 다음과 같이 switch문을 사용해야 하며 Operator 사용이 제한되는 등의 불편함이 생겼습니다.
@@ -155,6 +161,8 @@ Observable과 Subject(Relay)의 사용이 적절하지 않다고 저번에 디�
 ## 해결하지 못한 점
 ### 1. 메모리 누수
 Xcode에서 메모리 디버깅을 진행해 본 결과, 특정 상황에서 메모리 누수가 발생하는 것을 확인했습니다. 캡쳐리스트 사용 시 약한 참조를 걸어 개선해 볼 수 있다는걸 알게 되었는데요, `subscribe` 를 하는 과정에서 self에 대한 참조가 생긴다면 모두 해당 처리를 해줘야 하는 걸까요? 다른 기준이 있는지 궁금합니다. 
+
+> 탈출클로저에서 강한참조 때문에 문제가 발생할 수 있는 경우라면 모두 처리를 해야 한다.
 
 ### 2. Protocol을 활용한 추상화
 많은 MVVM 샘플 코드를 검색해 본 결과, ViewModelProtocol과 UseCaseProtocol를 사용하여 ViewModel과 UseCase를 추상화한것을 확인 했습니다. 저희는 시간 관계상 하지 못하였는데요, 이러한 추상화의 목적이 단순히 의존성 역전을 위한 것인지가 궁금합니다!
